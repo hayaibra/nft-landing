@@ -1,0 +1,117 @@
+@use "../helpers/variables/mainSectionDimention" as *;
+@use "../helpers/variables/colors" as *;
+@use "../helpers/mixins" as *;
+@use "../helpers/variables/widths" as*;
+
+.hero {
+  padding: $padding;
+
+  .container {
+    @include flex(space-between, center);
+
+    .hero-text {
+      flex: 1;
+      padding: 60px 0 0 0;
+
+      .hero-subtitle,
+      .hero-title,
+      .hero-subsicribe {
+        margin-bottom: $marginBottom;
+      }
+
+      .hero-subtitle {
+        color: $pink;
+        font-size: 40px;
+        font-weight: 300;
+        letter-spacing: 1px;
+
+
+
+        @media #{$max-mobile}{
+          font-size: 30px;
+        }
+      }
+
+      .hero-title {
+        font-weight: bold;
+        font-size: 70px;
+
+        @media #{$max-mobile}{
+          font-size: 60px;
+        }
+      }
+
+      .white-title {
+        color: $accent-color1;
+      }
+
+      .dark-title{
+        color: $background;
+      }
+
+      .hero-subsicribe {
+        font-size: 25px;
+        line-height: 1.6;
+
+        @media #{$max-mobile}{
+          font-size: 20px;
+        }
+      }
+
+      .white-sub {
+        color: $accent-color2;
+      }
+
+      .dark-sub {
+        color: $background;
+      }
+
+      .btn-box {
+        margin-bottom: 60px;
+      }
+    }
+
+    .image-container {
+      flex: 1;
+      position: relative;
+      @include flex(center, center);
+      padding: 60px 0 0 0;
+
+      .ellipse {
+        z-index: -1;
+        position: absolute;
+        height: 25%;
+        width: 25%;
+        filter: blur(100px);
+      }
+
+      .pink {
+        top: 45%;
+        right: 45%;
+        background-color: $pink;
+        z-index: 10;
+      }
+
+      .orange {
+        bottom: 45%;
+        left: 45%;
+        background-color: $orange;
+        z-index: 10;
+      }
+
+      @media #{$max-mobile}{
+       .image {
+         @include flex(center,center);
+         img{
+           width: 55%;
+         }
+       }
+       .ellipse {
+        height: 30%;
+        width: 30%;
+        filter: blur(60px);
+      }
+      }
+    }
+  }
+}

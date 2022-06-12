@@ -1,0 +1,145 @@
+@use "../helpers/variables/colors" as *;
+@use "../helpers//variables/widths" as *;
+@use "../helpers/mixins" as *;
+
+.nav {
+  height: 80px;
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+
+  .container {
+    @include flex(space-between, center);
+    height: 100%;
+
+    .nav-logo {
+      height: 100%;
+      width: 300px;
+      @include flex(center, center);
+
+      @media #{$max-mobile} {
+        width: 200px;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .nav-content {
+      display: flex;
+    align-items: center;
+    .mobile-icon {
+      @include flex(center, center);
+      height: 100%;
+      width: 30px;
+      margin-left: 20px;
+      
+      cursor: pointer;
+      position: relative;
+
+      @media ($min-small) {
+        display: none;
+      }
+
+      .icon {
+        font-size: 30px;
+
+      }
+    }
+
+    .light-icon{
+      color: $accent-color1;
+    }
+
+    .dark-icon {
+      color: $background
+    }
+
+  .nav-menu-mobile {
+    @include flex(center, center);
+    flex-direction: column;
+    background-image: linear-gradient(101deg , $pink , $orange);
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100vh;
+    align-items: center;
+    transition: 0.5s linear;
+    right: 0;
+
+      .nav-item {
+        .nav-link {
+          display: block;
+          padding: 53px;
+          color: $background;
+          font-size: 20px;
+          transition: 0.3s linear;
+
+
+          &:hover {
+            color: $pink;
+          }
+        }
+      }
+    }
+
+    .nav-menu {
+      @include flex(center, center);
+      height: 100%;
+
+      @media #{$max-mobile} {
+        display: none;
+      }
+
+      .nav-item {
+        .nav-link {
+          display: block;
+          padding: 10px 30px;
+          color: $accent-color3;
+          font-size: 20px;
+          font-weight: bold;
+          transition: 0.3s linear;
+
+          @media #{$max-mobile} {
+            padding: 20px 30px;
+            font-size: 30px;
+          }
+
+          &:hover {
+            color: $pink;
+          }
+        }
+
+        
+      }
+
+      
+    }
+
+    .yellow {
+      font-size: 30px;
+      color: yellow;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .white {
+      font-size: 30px;
+      color: $background;
+      cursor: pointer;
+      position: relative;
+    }
+    }
+
+  }
+}
+
+.dark-bg {
+  background-color: $background;
+}
+
+.white-bg {
+  background-color: $accent-color1;
+}

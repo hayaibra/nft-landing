@@ -1,0 +1,33 @@
+@use "../helpers/variables/fonts" as *;
+@use "../helpers/variables/colors" as*;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family;
+  
+}
+.dark {
+  background-color: $background;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+ background-color: $orange;
+ border-radius: 5px;
+}

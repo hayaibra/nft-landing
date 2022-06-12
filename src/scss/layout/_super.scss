@@ -1,0 +1,81 @@
+@use "../helpers/variables/colors" as *;
+@use "../helpers/variables/mainSectionDimention" as *;
+@use "../helpers/variables/widths" as*;
+
+.super {
+  padding: $padding;
+
+  .super-heading {
+    font-size: 60px;
+    margin-bottom: $marginBottom;
+
+    @media (max-width: 500px){
+      font-size: 35px;
+    }
+
+    
+  }
+
+  .white-title {
+    color: $accent-color1;
+  }
+
+  .dark-title {
+    color: $background;
+  }
+
+  
+
+  p {
+    font-size: 20px;
+    margin-bottom: $marginBottom;
+  }
+
+  .super-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 50px;
+
+    > .card-body {
+      width: 100%;
+
+      .card-series,
+      .card-top,
+      .card-title,
+      .card-price {
+        font-size: 20px;
+      }
+
+      .card-sub-details {
+        > span {
+          font-size: 20px;
+        }
+      }
+
+      
+    }
+
+    @media (min-width: 600px) and (max-width: 767px){
+      zoom: 0.7;
+    }
+    @media (max-width: 599px){
+      grid-template-columns: repeat(4 , 200px);
+      overflow: auto;
+      zoom: 0.8;
+      
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+    &::-webkit-scrollbar-track {
+      width: 5px;
+     }
+    &::-webkit-scrollbar-thumb {
+      background-color: $orange;
+      border-radius: 5px;
+     }
+
+    
+  }
+
+}

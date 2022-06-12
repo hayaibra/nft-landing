@@ -1,0 +1,99 @@
+@use "../helpers/variables/colors" as *;
+@use "../helpers/variables/mainSectionDimention" as *;
+@use "../helpers/mixins" as *;
+@use "../helpers/variables/widths" as *;
+
+footer {
+  padding-bottom: 100px;
+
+  .container {
+    position: relative;
+    .upper-footer {
+      @include flex(space-between, flex-start);
+      margin-bottom: 70px;
+  
+      .footer-content {
+        width: 45%;
+        img {
+          width: 300px;
+          margin-bottom: $marginBottom;
+        }
+  
+        .footre-icons-heading {
+          color: $accent-color3;
+          font-size: 25px;
+          margin-bottom: $marginBottom;
+        }
+  
+        .footer-icons {
+          @include flex(flex-start, center);
+  
+          .footer-icon {
+            font-size: 30px;
+            padding-right: 30px;
+            color: $accent-color3;
+          }
+        }
+      }
+  
+      .footer-menu-content {
+        display: flex;
+        flex-wrap: wrap;
+        .footer-items-box {
+          margin-left: 100px;
+          h4 {
+            
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 30px;
+          }
+
+          .light-title {
+            color: $accent-color1;
+          }
+
+          .dark-title {
+            color: $background;
+          }
+  
+          .footer-link {
+            padding: 5px 0;
+            color: $accent-color3;
+            font-size: 20px;
+            display: block;
+            font-weight: bold;
+          }
+
+          @media #{$max-mobile}{
+            margin-left: 0;
+            width: 45%;
+          }
+        }
+
+        @media #{$max-mobile}{
+          width: 100%;
+          margin-top: 60px;
+          gap: 40px;
+        }
+      }
+
+      @media #{$max-mobile}{
+        flex-direction: column;
+      }
+    }
+  
+    .lower-footer {
+      @include flex(space-between, center);
+      color: $accent-color3;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 50px;
+
+      @media #{$max-mobile}{
+       font-size: 13px;
+      }
+    }
+
+   
+  }
+}

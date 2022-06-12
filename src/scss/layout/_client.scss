@@ -1,0 +1,27 @@
+@use "../helpers/variables/colors" as *;
+@use "../helpers/variables/widths" as*;
+
+.clients {
+  padding-bottom: 100px;
+
+  .clients-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    .clients-item {
+      display: flex;
+      justify-content: center;
+      
+      @media  #{$max-mobile} {
+        &:nth-of-type(5) {
+          display: none;
+        }
+      }
+    }
+
+  }
+
+  @media #{$max-mobile} {
+    padding-bottom: 0;
+  }
+}

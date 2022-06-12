@@ -1,0 +1,93 @@
+@use "../helpers/variables/mainSectionDimention" as *;
+@use "../helpers/variables/colors" as *;
+@use "../helpers/mixins" as *;
+@use "../helpers/variables/widths" as*;
+
+.free {
+  padding: $padding;
+
+  .container {
+    position: relative;
+    .free-content {
+      background-color: $orange;
+      padding: 40px 40px 200px 40px;
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+
+      .ellipse {
+        position: absolute;
+        height: 100%;
+        width: 20%;
+        filter: blur(100px);
+      }
+
+      .pink {
+        top: 0;
+        left: -20px;
+        background-color: $pink;
+      }
+
+      .green {
+        top: 0;
+        right: -20px;
+        background-color: $green;
+      }
+
+      .free-text {
+        position: relative;
+        padding: 20px 0 20px 30px;
+
+        img {
+          margin-bottom: $marginBottom;
+        }
+
+        .free-heading {
+          font-weight: bolder;
+          margin-bottom: $marginBottom;
+          font-size: 45px;
+        }
+
+        p {
+          font-size: 25px;
+        }
+      }
+    }
+
+    .free-card-container {
+      @include flex(flex-end, center);
+      position: relative;
+      bottom: 570px;
+      right: 200px;
+
+      > .card-body {
+        width: 250px;
+
+        @media #{$max-mobile}{
+         width: 175px;
+        }
+        &:nth-of-type(1) {
+          transform: translateX(49px) rotate(-20deg);
+          z-index: 1;
+        }
+
+        &:nth-of-type(2) {
+          transform: rotate(9deg);
+        }
+
+        
+      }
+
+
+      @media  (max-width:1999px){
+        bottom: 93px;
+        zoom: 0.6;
+        top: -65%;
+        right: 90px;
+        position: absolute;
+      }
+
+      
+    }
+  }
+}

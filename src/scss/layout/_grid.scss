@@ -1,0 +1,23 @@
+@use "../helpers/variables/widths" as *;
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+
+  @media ($min-small) {
+    width: 750px;
+  }
+
+  @media ($min-medium) {
+    width: 970px;
+  }
+
+  @media ($min-large) {
+    width: 1170px;
+  }
+
+  @media ($min-Xlarge) {
+    width: 1850px;
+  }
+}

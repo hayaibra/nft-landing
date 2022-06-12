@@ -1,0 +1,30 @@
+@use "../helpers/variables/colors" as *;
+@use "../helpers/mixins" as *;
+
+.btn {
+  padding: 20px 40px;
+  font-weight: bold;
+  border: solid 3px transparent;
+  border-radius: 50px;
+  cursor: pointer;
+  background-image: linear-gradient(101deg, $pink, $orange);
+  box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+  transition: 0.5s ease-in-out;
+  font-size: 20px;
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.dark-btn {
+  box-shadow: 2px 1000px 1px $background inset;
+  background-color: $background;
+  color: $accent-color1;
+}
+
+.white-btn {
+  box-shadow: 2px 1000px 1px $accent-color1 inset;
+  background-color: $accent-color1;
+  color: $background;
+}

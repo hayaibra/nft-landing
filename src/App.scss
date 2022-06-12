@@ -1,0 +1,17 @@
+@use "./scss/helpers/variables/colors" as *;
+@use "./scss/helpers/variables/fonts" as *;
+@use "./scss/helpers/variables/widths" as *;
+
+@use "./scss/helpers/mixins" as *;
+
+@use "./scss/layout/globalPages" as *;
+
+@use "./scss/layout/Header" as *;
+
+@use "./scss/layout/grid" as *;
+
+@use "./scss/pages/Home" as *;
+
+@use "./scss/components/button" as *;
+
+// @use "./scss/components/ellipse" as *;
