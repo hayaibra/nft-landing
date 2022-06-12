@@ -1,6 +1,6 @@
 {
   "homepage": "http://hayaibra.github.io/nft-landing",
-  "name": "my-first-app",
+  "name": "nft-landing",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
