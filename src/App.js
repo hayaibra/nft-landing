@@ -1,7 +1,7 @@
 import React from "react";
 import Home from "./components/pages/Home";
 import Header from "./components/Header";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 import "./App.scss";
 
 function App() {
@@ -16,9 +16,7 @@ function App() {
   return (
     <Router>
       <Header toggle={toggleMood} dark={dark} />
-      <Routes>
-        <Route path="/" element={<Home toggle={toggleMood} dark={dark} />} />
-      </Routes>
+      <Home toggle={toggleMood} dark={dark} />
     </Router>
   );
 }
