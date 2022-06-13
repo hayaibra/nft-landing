@@ -13,13 +13,13 @@ import scrollreveal from "scrollreveal";
 function Home({ toggle, dark }) {
   React.useEffect(() => {
     const registerAnimation = () => {
-      const rs = scrollreveal({
+      const sr = scrollreveal({
         origin: "bottom",
         distance: "80px",
         duration: 1000,
         reset: false,
       });
-      rs.reveal(
+      sr.reveal(
         `.nav,.hero,.free,.clients,.super,.release,.like,.sign-up,.footer`,
         {
           interval: 500,
