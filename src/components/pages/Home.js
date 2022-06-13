@@ -20,7 +20,7 @@ function Home({ toggle, dark }) {
         reset: false,
       });
       sr.reveal(
-        `.nav,.hero,.free,.clients,.super,.release,.like,.sign-up,.footer`,
+        `nav,.hero,.free,.clients,.super,.release,.like,.sign-up,.footer`,
         {
           interval: 500,
         }
