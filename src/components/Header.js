@@ -21,13 +21,11 @@ function Header({ toggle, dark }) {
     <>
       <nav className={`nav ${dark ? "dark-bg" : "white-bg"}`}>
         <div className="container">
-          <Link to="/" className="nav-logo">
-            <img
-              src={require("../imges/logo.png")}
-              style={{ filter: !dark && "brightness(0)" }}
-              alt="logo"
-            />
-          </Link>
+          <img
+            src={require("../imges/logo.png")}
+            style={{ filter: !dark && "brightness(0)" }}
+            alt="logo"
+          />
           <div className="nav-content">
             <ul className={click ? "nav-menu-mobile" : "nav-menu"}>
               <li className="nav-item">
