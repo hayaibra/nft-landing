@@ -2,7 +2,6 @@ import React from "react";
 import "../scss/components/_card.scss";
 
 function Card(props) {
-  console.log(props);
   return (
     <li className="card-body">
       <div className="card-img">

@@ -9,9 +9,10 @@ import Like from "../Like";
 import SignUp from "../SignUp";
 import Footer from "../Footer";
 import scrollreveal from "scrollreveal";
+import { useEffect } from "react";
 
 function Home({ toggle, dark }) {
-  React.useEffect(() => {
+  useEffect(() => {
     const registerAnimation = () => {
       const sr = scrollreveal({
         origin: "bottom",
@@ -29,16 +30,17 @@ function Home({ toggle, dark }) {
     registerAnimation();
   }, []);
 
+
   return (
     <>
       <HeroSection toggle={toggle} dark={dark} />
       <Free />
       <Clients />
-      <Super toggle={toggle} dark={dark}/>
+      <Super toggle={toggle} dark={dark} />
       <Release />
       <Like />
-      <SignUp toggle={toggle} dark={dark}/>
-      <Footer toggle={toggle} dark={dark} /> 
+      <SignUp toggle={toggle} dark={dark} />
+      <Footer toggle={toggle} dark={dark} />
     </>
   );
 }
